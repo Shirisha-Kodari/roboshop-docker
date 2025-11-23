@@ -1,4 +1,4 @@
-FROM node:20-alpine3.21 AS builder
+FROM node:20-alpine3.21 AS builder 
 WORKDIR /opt/server
 COPY package.json .
 COPY *.js .
@@ -15,6 +15,8 @@ COPY --from=builder /opt/server /opt/server
 CMD ["node","server.js"] 
 
 
+#-->setup workdir /opt/server and copy the files package.json,.js placed in current dirtory install depances we use npm
+
 # FROM node:20-alpine3.21
 # RUN addgroup -S roboshop && adduser -S roboshop -G roboshop
 # WORKDIR /opt/server
@@ -26,3 +28,7 @@ CMD ["node","server.js"]
 # ENV MONGO=true \
 #     MONGO_URL=mongodb://mongodb:27017/catalogue
 # CMD ["node","server.js"]    
+
+
+#-->setup workdir /opt/server and copy the files package.json,.js placed in current dirtory install depances we use npm
+#
