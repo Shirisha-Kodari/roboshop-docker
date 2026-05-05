@@ -6,7 +6,7 @@ if [ -f /tmp/mysql_root_password.txt ]; then # file exits or not checks
 else #if success password or not success print password file not found then exit 
 
   echo "password file not found"
-  exit 1
+  exit 1 
 file
 # making it as available in shell env
 export MYSQL_ROOT_PASSWORD=$PASSWORD
