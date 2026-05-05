@@ -25,3 +25,8 @@ CMD ["node","server.js"]
 #     CATALOGUE_HOST="catalogue" \
 #     CATALOGUE_PORT="8080"
 # CMD ["node","server.js"]    
+
+
+
+
+# "This is a multi-stage Dockerfile. In the first stage, we build the Node.js application and install dependencies. In the second stage, we create a minimal runtime image, add a non-root user for security, set environment variables for service communication, copy the built artifacts from the builder stage, and finally run the application using node server.js. This approach reduces image size and improves security."
