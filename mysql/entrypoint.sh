@@ -1,16 +1,18 @@
 #!/bin/bash
 
-if [ -f /tmp/mysql-root-password.txt ]; then
-    PASSWORD=$(cat /tmp/mysql-root-password.txt)
-    echo "Accessed MySQL root password"
-else
-    echo "MySQL Root password file not found"
-    exit 1
-fi
+# if [ -f /tmp/mysql-root-password.txt ]; then
+#     PASSWORD=$(cat /tmp/mysql-root-password.txt)
+#     echo "Accessed MySQL root password"
+# else
+#     echo "MySQL Root password file not found"
+#     exit 1
+# fi
 
-export MYSQL_ROOT_PASSWORD=$PASSWORD
-rm -rf /tmp/mysql-root-password.txt
-exec /entrypoint.sh mysqld
+# export MYSQL_ROOT_PASSWORD=$PASSWORD
+# rm -rf /tmp/mysql-root-password.txt
+# exec /entrypoint.sh mysqld
+
+
 
 # if [ -f /tmp/mysql_root_password.txt ]; then # file exits or not checks 
 #    PASSWORD=$(cat /tmp/mysql_root_password.txt) #set mysqlrootpassword set as a variable 
