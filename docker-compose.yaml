@@ -13,7 +13,7 @@ services:
     image: shirisha104/mongodb:v1
     container_name: mongodb
     volumes:
-    - mongodb:/data/db/
+    - mongodb:/data/db/  # mongodb is volume and /data/db/ store here ourdata and mounted our volume to conatoner path 
   catalogue:
     image: shirisha104/catalogue:v1
     container_name: catalogue

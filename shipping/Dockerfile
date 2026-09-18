@@ -14,6 +14,8 @@
 # USER roboshop
 # CMD ["java","-jar","shipping.jar"]
 
+
+
 # FROM maven
 # WORKDIR /opt/server
 # COPY pom.xml .
@@ -25,23 +27,6 @@
 # CMD ["java","-jar","shipping.jar"]
 
 
-#-----------------------------------------
-# FROM maven:3.9-eclipse-temurin-17 AS builder
-
-# WORKDIR /opt/server
-
-# COPY pom.xml .
-# COPY src /opt/server/src
-
-# RUN mvn clean package
-
-# FROM eclipse-temurin:17-jre-alpine
-
-# WORKDIR /opt/server
-
-# COPY --from=builder /opt/server/target/*.jar app.jar
-
-# CMD ["java", "-jar", "app.jar"]
 
 
 FROM maven:3.9-eclipse-temurin-17 AS builder
